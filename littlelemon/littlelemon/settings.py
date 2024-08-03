@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restaurant',
     'rest_framework',
+    'LittleLemonAPI',
+    'rest_framework.authtoken',
+    'djoser',
     
 ]
 
@@ -139,5 +142,13 @@ REST_FRAMEWORK = {
      'DEFAULT_AUTHENTICATION_CLASSES': (
          'rest_framework.authentication.SessionAuthentication',
      ),
+     
 
  }
+
+DJOSER = {"batu": "batuu"}
+
+DEFAULT_AUTHENTICATION_CLASSES = [
+    'rest_framework.authentication.SessionAuthentication',
+    'rest_framework.authentication.TokenAuthentication',
+]
